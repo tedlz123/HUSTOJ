@@ -1,10 +1,10 @@
 all:judged judge_client make_sim
 judge_client:judge_client.c
 	gcc -Wall -c judge_client.c
-	gcc -Wall -o judge_client judge_client.o -lcurl -lmysqlclient
+	gcc -Wall -o judge_client judge_client.o -lmysqlclient
 judged:judged.c
 	gcc -Wall -c judged.c
-	gcc -Wall -o judged judged.o -lcurl -lmysqlclient
+	gcc -Wall -o judged judged.o -lmysqlclient
 make_sim:
 	make -C sim
 install:judged judge_client
