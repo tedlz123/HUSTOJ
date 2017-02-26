@@ -12,7 +12,7 @@ install:judged judge_client
 	cp -f judge_client /usr/bin/judge_client
 	cp -u java0.policy /home/judge/etc/java0.policy
 	cp -u judge.conf /home/judge/etc/judge.conf
-	cp judged.script /etc/init.d/judged
+	cp judged.sh /etc/init.d/judged
 	chmod +x /etc/init.d/judged
 	ln -f -s /etc/init.d/judged /etc/rc2.d/S93judged
 	ln -f -s /etc/init.d/judged /etc/rc3.d/S93judged
